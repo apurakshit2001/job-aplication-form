@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(to bottom right, #ff8a00, #ff4d00, #ccc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.apply-box {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 50px auto 0 auto;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.5);
+    border-radius: 10px;
+}
+
+.title-small {
+    font-size: 20px;
+}
+
+.form-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    font-size: 15px;
+}
+
+input,
+select,
+textarea {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline-color: red;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+button {
+    /* background-color: red;
+    border: transparent solid 2px ;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in; */
+
+    background-color: #ff4d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+button:hover {
+    background-color: #ccc;
+    border: 2px solid red;
+    color: black;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.2);
+
+}
+
+.address-form-control {
+    grid-column: 1/ span 2;
+}
+
+.address-form-control textarea {
+    width: 100%;
+}
+
+.form-control input[type="text"],
+.form-control input[type="date"],
+.form-control input[type="number"],
+.form-control input[type="email"],
+.form-control textarea,
+.form-control select {
+    background-color: #fff;
+    border: 2px solid #ff8a00;
+    color: #333;
+    transition: border-color 0.3s ease-in;
+}
+
+.form-control input[type="text"]:focus,
+.form-control textarea:focus,
+.form-control select:focus {
+    outline: none;
+    border-color: #ff4d00;
+}
+
+
+
+
+@media (max-width:460px) {
+    .address-form-control {
+        grid-column: 1/ span 1;
+    }
+}
+
+@media (max-width:621px) {
+    body {
+        margin: 10px;
+        padding: 5px;
+        height: auto;
+    }
+}
